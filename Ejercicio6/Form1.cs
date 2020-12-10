@@ -38,6 +38,7 @@ namespace Ejercicio6
                     y += 40;
                     x = 20;
                 }
+                btn.TabIndex = i;
                 btn.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
                 btn.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
                 btn.Click += new System.EventHandler(this.btn_Click);

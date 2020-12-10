@@ -18,3 +18,13 @@ C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\DI-Tema-4-Ejercicio6\Ejercicio
 C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\DI-Tema-4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.csproj.CoreCompileInputs.cache
 C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\DI-Tema-4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.exe
 C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\DI-Tema-4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.pdb
+C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\bin\Debug\Ejercicio6.exe.config
+C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\bin\Debug\Ejercicio6.exe
+C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\bin\Debug\Ejercicio6.pdb
+C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.csprojAssemblyReference.cache
+C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.Form1.resources
+C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.Properties.Resources.resources
+C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.csproj.GenerateResource.cache
+C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.exe
+C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.pdb
