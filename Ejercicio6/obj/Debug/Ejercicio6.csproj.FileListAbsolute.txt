@@ -28,3 +28,4 @@ C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio
 C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.csproj.CoreCompileInputs.cache
 C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.exe
 C:\Users\PC\Documents\GitHub\DI-Tema 4-Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.pdb
+C:\Users\gleen\source\repos\2EV\Tema 4\Ejercicio6\Ejercicio6\obj\Debug\Ejercicio6.Form2.resources

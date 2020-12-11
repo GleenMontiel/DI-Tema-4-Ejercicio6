@@ -13,6 +13,9 @@ namespace Ejercicio6
 {
     public partial class Form1 : Form
     {
+        private string password = "0000";
+        bool run = false;
+        int errorCount = 0;
         public Form1()
         {
             InitializeComponent();
@@ -20,6 +23,33 @@ namespace Ejercicio6
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Form2 form2 = new Form2();
+            DialogResult result;
+
+            do
+            {
+                result = form2.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    if (form2.txtPassword.Text==password)
+                    {
+                        run = true;
+                    }
+                    else
+                    {
+                        form2.lblError.Text = string.Format("Contraseña incorrecta te quedan {0} intentos", 2 - errorCount);
+                        errorCount++;
+                        form2.txtPassword.Text = "";
+                        if (limiteErrores(errorCount)) this.Close();
+                    }
+                }
+                else
+                {
+                    run = true;
+                    this.Close();
+                }
+            } while (!run);
+
             Button btn;
             int x = 20;
             int y = 70;
@@ -29,12 +59,13 @@ namespace Ejercicio6
                 btn.Text = i.ToString();
                 if (i == 10) btn.Text = '*'.ToString();
                 if (i == 11) btn.Text = 0.ToString();
-                if (i == 12) btn.Text = '#'.ToString();
+                if (i == 12) btn.Text = "#";// '.ToString();
 
                 btn.Size = new Size(75, 25);
                 btn.Location = new Point(x, y);
                 x += 100;
-                if (i % 3 == 0) {
+                if (i % 3 == 0)
+                {
                     y += 40;
                     x = 20;
                 }
@@ -46,40 +77,42 @@ namespace Ejercicio6
             }
         }
 
+        private bool limiteErrores(int n)
+        {
+            return n == 3;
+        }
+
         private void btn_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = Color.Aqua;
-
+            if (((Button)sender).BackColor != Color.Red)
+            {
+                ((Button)sender).BackColor = Color.Aqua;
+            }
         }
 
         private void btn_MouseLeave(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = DefaultBackColor;
+            if (((Button)sender).BackColor != Color.Red)
+            {
+                ((Button)sender).BackColor = DefaultBackColor;
+            }
         }
 
         private void btn_Click(object sender, EventArgs e)
         {
             txtPantalla.Text += ((Button)sender).Text;
             ((Button)sender).BackColor = Color.Red;
-            ((Button)sender).MouseEnter -= new System.EventHandler(this.btn_MouseEnter);
-            ((Button)sender).MouseLeave -= new System.EventHandler(this.btn_MouseLeave);
+
         }
 
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
-            Restaurar();
-        }
-
-        public void Restaurar() 
-        {
             txtPantalla.Text = "";
             foreach (object control in this.Controls)
             {
-                if (control.GetType() == typeof(Button) && control != btnRestaurar)
+                if (control is Button && control != btnRestaurar)
                 {
                     ((Button)control).BackColor = DefaultBackColor;
-                    ((Button)control).MouseEnter += new System.EventHandler(this.btn_MouseEnter);
-                    ((Button)control).MouseLeave += new System.EventHandler(this.btn_MouseLeave);
                 }
             }
         }
@@ -94,24 +127,19 @@ namespace Ejercicio6
                 saveFileDialog.InitialDirectory = Environment.GetEnvironmentVariable("HomePath");
                 saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
                 saveFileDialog.ValidateNames = true;
-
+                saveFileDialog.OverwritePrompt = false;
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName,true))
+                    using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName, true))
                     {
                         sw.WriteLine(txtPantalla.Text);
                     }
-                }             
+                }
             }
-            else 
+            else
             {
                 MessageBox.Show("No hay número a guardar");
             }
-        }
-
-        private void resetToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Restaurar();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
